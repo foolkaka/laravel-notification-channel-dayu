@@ -1,5 +1,5 @@
 {
-    "name": "huami-cloud/laravel-notification-channel-dayu",
+    "name": "chrisfoon/laravel-notification-channel-dayu",
     "description": "Alibaba Dayu SMS Channel for Laravel 5.3",
     "homepage": "https://www.alidayu.com/",
     "license": "MIT",
