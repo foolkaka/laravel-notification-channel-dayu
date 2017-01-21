@@ -67,4 +67,11 @@ class JusibeMessageTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('uid-612606', $this->message->extend);
     }
 
+    /** @test */
+    public function is_can_set_template()
+    {
+        $this->message->template('sms_00013');
+        $this->assertEquals('sms_00013', $this->message->template);
+    }
+
 }

@@ -33,6 +33,13 @@ class DayuMessage
     public $extend;
 
     /**
+     * The sms template code.
+     *
+     * @var string
+     */
+    public $template;
+
+    /**
      * @param  string|array $content
      *
      * @return static
@@ -107,6 +114,20 @@ class DayuMessage
     public function extend($extend)
     {
         $this->extend = $extend;
+
+        return $this;
+    }
+
+    /**
+     * Set the sms template.
+     *
+     * @param string $template
+     *
+     * @return $this
+     */
+    public function template($template)
+    {
+        $this->template = $template;
 
         return $this;
     }
