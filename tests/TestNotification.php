@@ -1,15 +1,15 @@
 <?php
 
-namespace NotificationChannels\Dayu\Test;
+namespace NotificationChannels\Dayusms\Test;
 
 use Illuminate\Notifications\Notification;
-use NotificationChannels\Dayu\DayuMessage;
+use NotificationChannels\Dayusms\DayusmsMessage;
 
 class TestNotification extends Notification
 {
-    public function toDayu($notifiable)
+    public function toDayusms($notifiable)
     {
-        return (new DayuMessage)
+        return (new DayusmsMessage)
                 ->content('{"level":"P0", "service":"aos-common", "info":"502"}')
                 ->from('MiFit');
     }

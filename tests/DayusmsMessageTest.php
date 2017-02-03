@@ -1,34 +1,34 @@
 <?php
 
-namespace NotificationChannels\Dayu\Test;
+namespace NotificationChannels\Dayusms\Test;
 
-use NotificationChannels\Dayu\DayuMessage;
+use NotificationChannels\Dayusms\DayusmsMessage;
 use PHPUnit_Framework_TestCase;
 
 class JusibeMessageTest extends PHPUnit_Framework_TestCase
 {
-    /** @var \NotificationChannels\Dayu\DayuMessage */
+    /** @var \NotificationChannels\Dayusms\DayusmsMessage */
     protected $message;
 
     public function setUp()
     {
         parent::setUp();
 
-        $this->message = new DayuMessage();
+        $this->message = new DayusmsMessage();
     }
 
     /** @test */
     public function it_can_accept_a_string_message_when_constructing_a_message()
     {
         $mesasgeString = '{"template_key":"template_value","test_key":"test_value"}';
-        $message = new DayuMessage($mesasgeString);
+        $message = new DayusmsMessage($mesasgeString);
         $this->assertEquals($mesasgeString, $message->content);
     }
     
     /** @test */
     public function it_can_accept_an_array_message_when_constructing_a_message()
     {
-        $message = new DayuMessage(['template_key'=>'template_value','test_key'=>'test_value']);
+        $message = new DayusmsMessage(['template_key'=>'template_value','test_key'=>'test_value']);
         $this->assertEquals('{"template_key":"template_value","test_key":"test_value"}', $message->content);
     }
 

@@ -1,5 +1,5 @@
 {
-    "name": "chrisfoon/laravel-notification-channel-dayu",
+    "name": "chrisfoon/laravel-notification-channel-dayusms",
     "description": "Alibaba Dayu SMS Channel for Laravel 5.3",
     "homepage": "https://www.alidayu.com/",
     "license": "MIT",
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NotificationChannels\\Dayu\\": "src"
+            "NotificationChannels\\Dayusms\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\Dayu\\Test\\": "tests"
+            "NotificationChannels\\Dayusms\\Test\\": "tests"
         }
     },
     "scripts": {

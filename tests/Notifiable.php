@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\Dayu\Test;
+namespace NotificationChannels\Dayusms\Test;
 
 class Notifiable
 {
@@ -9,7 +9,7 @@ class Notifiable
     /**
      * @return int
      */
-    public function routeNotificationForDayu()
+    public function routeNotificationForDayusms()
     {
         return '18611100000';
     }

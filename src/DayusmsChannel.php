@@ -1,12 +1,12 @@
 <?php
 
-namespace NotificationChannels\Dayu;
+namespace NotificationChannels\Dayusms;
 
 use DomainException;
 use Illuminate\Notifications\Notification;
-use NotificationChannels\Dayu\Exceptions\CouldNotSendNotification;
+use NotificationChannels\Dayusms\Exceptions\CouldNotSendNotification;
 
-class DayuChannel
+class DayusmsChannel
 {
     /**
      * The Top client instance.
@@ -38,7 +38,7 @@ class DayuChannel
      * @param  \Illuminate\Notifications\Notification $notification
      * @return mixed
      *
-     * @throws \NotificationChannels\Dayu\Exceptions\CouldNotSendNotification
+     * @throws \NotificationChannels\Dayusms\Exceptions\CouldNotSendNotification
      */
     public function send($notifiable, Notification $notification)
     {
@@ -46,10 +46,10 @@ class DayuChannel
             throw CouldNotSendNotification::missingTo();
         }
 
-        $message = $notification->toDayu($notifiable);
+        $message = $notification->toDayusms($notifiable);
 
         if (is_string($message)) {
-            $message = new DayuMessage($message);
+            $message = new DayusmsMessage($message);
         }
 
         if (! $from = $message->from ?: config('services.dayu.sms_from')) {

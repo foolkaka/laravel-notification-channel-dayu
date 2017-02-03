@@ -1,8 +1,8 @@
 <?php
 
-namespace NotificationChannels\Dayu;
+namespace NotificationChannels\Dayusms;
 
-class DayuMessage
+class DayusmsMessage
 {
     /**
      * The message content.

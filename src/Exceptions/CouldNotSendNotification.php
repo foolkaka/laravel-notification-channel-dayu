@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\Dayu\Exceptions;
+namespace NotificationChannels\Dayusms\Exceptions;
 
 use Exception;
 use DomainException;

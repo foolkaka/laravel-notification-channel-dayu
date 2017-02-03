@@ -19,7 +19,7 @@ This package makes it easy to send [Dayu Sms notifications](https://api.alidayu.
 You can install the package via composer:
 
 ``` bash
-composer require huami-cloud/laravel-notification-channel-dayu
+composer require huami-cloud/laravel-notification-channel-dayusms
 ```
 
 You must install the service provider:
@@ -28,7 +28,7 @@ You must install the service provider:
 // config/app.php
 'providers' => [
     ...
-    NotificationChannels\Dayu\DayuServiceProvider::class,
+    NotificationChannels\Dayusms\DayusmsServiceProvider::class,
 ],
 ```
 
@@ -56,29 +56,29 @@ Add your Dayu Account App Key, App Secret, Sms Template Code (optional), Sign Na
 Now you can use the channel in your `via()` method inside the notification:
 
 ``` php
-use NotificationChannels\Dayu\DayuChannel;
-use NotificationChannels\Dayu\DayuMessage;
+use NotificationChannels\Dayusms\DayusmsChannel;
+use NotificationChannels\Dayusms\DayusmsMessage;
 use Illuminate\Notifications\Notification;
 
 class ValentineDateApproved extends Notification
 {
     public function via($notifiable)
     {
-        return [DayuChannel::class];
+        return [DayusmsChannel::class];
     }
 
-    public function toDayu($notifiable)
+    public function toDayusms($notifiable)
     {
-        return (new DayuMessage())
+        return (new DayusmsMessage())
             ->content('{"level":"P0", "service":"'.$notifiable->service.'", "info":"502"}');
     }
 }
 ```
 
-In order to let your Notification know which phone number you are sending to, add the `routeNotificationForDayu` method to your Notifiable model e.g your User Model
+In order to let your Notification know which phone number you are sending to, add the `routeNotificationForDayusms` method to your Notifiable model e.g your User Model
 
 ```php
-public function routeNotificationForDayu()
+public function routeNotificationForDayusms()
 {
     // where `phone` is a field in your users table;
     // can set multiple phones as string which separated by comma `,` .

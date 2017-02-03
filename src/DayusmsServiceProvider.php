@@ -1,18 +1,18 @@
 <?php
 
-namespace NotificationChannels\Dayu;
+namespace NotificationChannels\Dayusms;
 
-use NotificationChannels\Dayu\Exceptions\InvalidConfiguration;
+use NotificationChannels\Dayusms\Exceptions\InvalidConfiguration;
 use Illuminate\Support\ServiceProvider;
 
-class DayuServiceProvider extends ServiceProvider
+class DayusmsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
      */
     public function boot()
     {
-        $this->app->when(DayuChannel::class)
+        $this->app->when(DayusmsChannel::class)
             ->needs(\TopClient::class)
             ->give(function () {
                 $config = config('services.dayu');
