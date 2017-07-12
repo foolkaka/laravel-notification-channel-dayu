@@ -42,7 +42,7 @@ class DayusmsChannel
      */
     public function send($notifiable, Notification $notification)
     {
-        if (! $to = $notifiable->routeNotificationFor('dayu')) {
+        if (! $to = $notifiable->routeNotificationFor('Dayusms')) {
             throw CouldNotSendNotification::missingTo();
         }
 
