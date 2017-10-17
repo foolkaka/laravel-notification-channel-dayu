@@ -19,7 +19,7 @@ This package makes it easy to send [Dayu Sms notifications](https://api.alidayu.
 You can install the package via composer:
 
 ``` bash
-composer require huami-cloud/laravel-notification-channel-dayusms
+composer require foolkaka/laravel-notification-channel-dayusms
 ```
 
 You must install the service provider:
