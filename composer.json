@@ -1,5 +1,5 @@
 {
-    "name": "chrisfoon/laravel-notification-channel-dayusms",
+    "name": "foolkaka/laravel-notification-dayu",
     "description": "Alibaba Dayu SMS Channel for Laravel 5.3",
     "homepage": "https://www.alidayu.com/",
     "license": "MIT",
