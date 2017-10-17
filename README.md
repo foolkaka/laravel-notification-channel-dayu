@@ -1,7 +1,7 @@
-# Alibaba Dayu SMS notifications channel for Laravel 5.3
+# Alibaba Dayu SMS notifications channel for Laravel 5.4
 
 
-This package makes it easy to send [Dayu Sms notifications](https://api.alidayu.com/docs/api.htm?spm=a3142.7395905.4.6.KVF6uS&apiId=25450) with Laravel 5.3.
+This package makes it easy to send [Dayu Sms notifications](https://api.alidayu.com/docs/api.htm?spm=a3142.7395905.4.6.KVF6uS&apiId=25450) with Laravel 5.4.
 
 ## Contents
 
